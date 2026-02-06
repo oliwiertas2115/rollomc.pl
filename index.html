@@ -11,8 +11,8 @@
 
     <style>
         :root {
-            --primary: #ffcc00; /* Kolor sosu/sera */
-            --secondary: #ff4500; /* Kolor ostrego sosu */
+            --primary: #ffcc00; 
+            --secondary: #ff4500; 
             --primary-glow: rgba(255, 204, 0, 0.4);
             --bg-deep: #0a0805;
             --bg-card: rgba(25, 20, 15, 0.9);
@@ -32,7 +32,6 @@
         .loader-logo { 
             width: 130px; 
             filter: drop-shadow(0 0 25px var(--primary-glow));
-            /* Efekt rollowania (obrót w 3D) */
             animation: rolloRotation 2s infinite linear;
         }
         @keyframes rolloRotation {
@@ -42,10 +41,8 @@
         }
         .loader-hidden { opacity: 0; visibility: hidden; }
 
-        /* --- TŁO --- */
         #particles-js { position: fixed; inset: 0; z-index: 1; pointer-events: none; }
         
-        /* --- NAWIGACJA --- */
         nav {
             position: fixed; top: 0; width: 100%; padding: 15px 5%;
             display: flex; justify-content: space-between; align-items: center;
@@ -55,12 +52,10 @@
         .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; color: white; font-weight: 800; font-family: 'Space Grotesk'; cursor: pointer; }
         .nav-logo img { width: 35px; }
 
-        /* --- STRONY --- */
         .page { display: none; padding: 110px 5% 50px; min-height: 100vh; position: relative; z-index: 10; text-align: center; }
         .page.active { display: block; animation: fadeIn 0.5s ease; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
 
-        /* --- HERO --- */
         .hero-logo { width: clamp(150px, 30vw, 220px); margin-bottom: 15px; filter: drop-shadow(0 0 30px var(--primary-glow)); animation: float 4s infinite ease-in-out; }
         @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
 
@@ -72,7 +67,6 @@
         .btn-primary { background: var(--primary); color: black; border: none; }
         .btn-primary:hover { box-shadow: 0 0 25px var(--primary-glow); transform: scale(1.05); }
 
-        /* --- SKLEP I ANIMACJA SKINA --- */
         .shop-container { display: grid; grid-template-columns: 1fr 380px; gap: 20px; text-align: left; max-width: 1000px; margin: 0 auto; }
         .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
         input { width: 100%; background: #000; border: 1px solid var(--border); padding: 14px; border-radius: 12px; color: white; margin-top: 8px; outline: none; }
@@ -82,7 +76,6 @@
         #skin-img { height: 100%; animation: heroIdle 5s infinite ease-in-out; transform-origin: bottom center; filter: drop-shadow(0 0 15px rgba(255,204,0,0.2)); }
         @keyframes heroIdle { 0%, 100% { transform: scale(1) rotate(0deg); } 50% { transform: scale(1.04) rotate(1deg); } }
 
-        /* --- STOPKA --- */
         footer { margin-top: 50px; padding: 40px 5%; display: flex; flex-direction: column; align-items: center; gap: 20px; z-index: 10; position: relative; }
         .social-row { display: flex; gap: 15px; }
         .social-btn {
@@ -116,15 +109,15 @@
 <div id="home" class="page active">
     <img src="https://i.imgur.com/rTh3AUt.png" class="hero-logo">
     <h1 style="font-family: 'Space Grotesk'; font-size: clamp(2rem, 10vw, 4rem); text-transform: uppercase; line-height: 1;">ROLLO<span style="color:var(--primary)">MC</span></h1>
-    <p style="font-weight: 800; color: #777; letter-spacing: 2px; margin-bottom: 30px; text-transform: uppercase;">Najsmaczniejszy Kebabowy Skyblock w Polsce</p>
+    <p style="font-weight: 800; color: #777; letter-spacing: 2px; margin-bottom: 30px; text-transform: uppercase;">Najsmaczniejszy Kebabowy serwer w Polsce</p>
 
     <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-        <button class="btn btn-primary" onclick="go('shop')"><i class="fas fa-utensils"></i> ZAMÓW DODATKI</button>
+        <button class="btn btn-primary" onclick="go('shop')"><i class="fas fa-wallet"></i> DOŁADUJ PORTFEL</button>
         <button class="btn" onclick="go('rules')"><i class="fas fa-scroll"></i> REGULAMIN</button>
     </div>
 
     <div style="margin-top: 50px;">
-        <p style="font-size: 0.7rem; font-weight: 800; color: var(--primary); letter-spacing: 4px;">WYDANIE KEBABA ZA:</p>
+        <p style="font-size: 0.7rem; font-weight: 800; color: var(--primary); letter-spacing: 4px;">EDYCJA TRWA:</p>
         <div style="display: flex; justify-content: center; gap: 12px; margin-top: 15px;">
             <div style="background: rgba(255,204,0,0.05); padding: 15px; border-radius: 15px; border: 1px solid var(--border); min-width: 80px;">
                 <span id="d" style="font-size: 1.8rem; font-weight: 800; color: var(--primary);">00</span><br><small style="color:#555">DNI</small>
@@ -155,7 +148,7 @@
             <div style="margin-top:25px; background: rgba(0,0,0,0.3); padding: 20px; border-radius: 15px; border: 1px solid var(--border);">
                 <div style="display:flex; justify-content: space-between; align-items: center;">
                     <span style="font-weight: 800;">WARTOŚĆ:</span>
-                    <span style="color: var(--primary); font-weight: 800; font-size: 1.3rem;"><span id="val">1</span> PLN</span>
+                    <span style="color: var(--primary); font-weight: 800; font-size: 1.3rem;"><span id="val">1</span> VPLN</span>
                 </div>
                 <input type="range" min="1" max="200" value="1" oninput="sync(this.value)" style="accent-color: var(--primary); margin-top: 10px;">
             </div>
@@ -186,7 +179,7 @@
         <a href="https://tiktok.com/@rollomc" target="_blank" class="social-btn"><i class="fab fa-tiktok"></i> TIKTOK</a>
         <a href="https://discord.gg/rollomc" target="_blank" class="social-btn"><i class="fab fa-discord"></i> DISCORD</a>
     </div>
-    <p style="font-size: 0.6rem; color: #444; font-weight: 800; letter-spacing: 1px;">&copy; 2026 ROLLOMC.PL — SERWOWANE Z PASJĄ</p>
+    <p style="font-size: 0.6rem; color: #444; font-weight: 800; letter-spacing: 1px;">&copy; © 2026 ROLLOMC.PL — WSZELKIE PRAWA ZASTRZEŻONE</p>
 </footer>
 
 <script>
@@ -194,18 +187,27 @@
     function go(id) { document.querySelectorAll('.page').forEach(p => p.classList.remove('active')); document.getElementById(id).classList.add('active'); window.scrollTo(0,0); }
     function sync(v) { document.getElementById('val').innerText = v; document.getElementById('total').innerText = v + ".00"; }
     function updateSkin() { const n = document.getElementById('nick').value; if(n.length > 2) document.getElementById('skin-img').src = `https://mc-heads.net/body/${n}`; }
-    function copyIP() { navigator.clipboard.writeText("rollomc.pl"); alert("IP ROLLOMC.PL SKOPIOWANE!"); }
+    function copyIP() { navigator.clipboard.writeText("rollomc.pl"); alert("Pomyślnie skopiowano IP!"); }
 
-    function updateT() {
-        const diff = new Date("Mar 01, 2026 18:00:00").getTime() - new Date().getTime();
+    function updateCounter() {
+        const start = new Date("February 07, 2026 18:00:00").getTime();
+        const now = new Date().getTime();
+        const diff = now - start;
+
         if(diff > 0) {
             document.getElementById('d').innerText = Math.floor(diff/86400000).toString().padStart(2,'0');
             document.getElementById('h').innerText = Math.floor((diff/3600000)%24).toString().padStart(2,'0');
             document.getElementById('m').innerText = Math.floor((diff/60000)%60).toString().padStart(2,'0');
             document.getElementById('s').innerText = Math.floor((diff/1000)%60).toString().padStart(2,'0');
+        } else {
+            // Jeśli czas jeszcze nie nadszedł, pokazuje zera
+            document.getElementById('d').innerText = "00";
+            document.getElementById('h').innerText = "00";
+            document.getElementById('m').innerText = "00";
+            document.getElementById('s').innerText = "00";
         }
     }
-    setInterval(updateT, 1000); updateT();
+    setInterval(updateCounter, 1000); updateCounter();
 
     particlesJS("particles-js", { "particles": { "number": { "value": 40 }, "color": { "value": "#ffcc00" }, "opacity": { "value": 0.2 }, "size": { "value": 2 }, "line_linked": { "enable": true, "distance": 120, "color": "#ff4500", "opacity": 0.1 }, "move": { "enable": true, "speed": 1 } } });
 </script>
